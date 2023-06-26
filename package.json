@@ -1,5 +1,19 @@
 {
   "dependencies": {
     "nodemon": "^2.0.22"
-  }
+  },
+  "name": "44-server-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "devDependencies": {},
+  "scripts": {
+    "ts": "tsc --watch",
+    "server": "nodemon ./dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "ZygimantasL",
+  "license": "MIT",
+  "description": ""
 }
