@@ -29,7 +29,26 @@ const server = {} as Server;
         const isAPI = trimmedPath.startsWith('api/');
         const isPage = !isTextFile && !isBinaryFile && !isAPI;
 
-    let responseContent = '';
+        let responseContent = '';
+
+        if (isTextFile) {
+            responseContent = 'test text';
+        }
+    
+        if (isBinaryFile) {
+            responseContent = '01001000 01100101 01101100 01101100 01101111 00100001';
+        }
+    
+        if (isAPI) {
+            responseContent = "it's an api"
+            
+        }
+    
+        if (isPage) {
+            responseContent = `puslapis `;
+        }
+
+    
     return res.end(responseContent);
 });
 
