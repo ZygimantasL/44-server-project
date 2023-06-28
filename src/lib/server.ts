@@ -29,7 +29,16 @@ const server = {} as Server;
         const isAPI = trimmedPath.startsWith('api/');
         const isPage = !isTextFile && !isBinaryFile && !isAPI;
 
-        let responseContent = '';
+        type Mimes = Record<string, string>;
+
+        const MIMES: Mimes = {
+            html: 'text/html',
+            js: 'text/javascript',
+            json: 'application/json',
+            txt: 'text/plain',
+            webmanifest: 'application/manifest+json',
+        };
+        let responseContent = 'ERROR: neturiu tai ko tu nori...';
 
         if (isTextFile) {
             responseContent = 'test text';
@@ -40,9 +49,7 @@ const server = {} as Server;
         }
     
         if (isAPI) {
-            responseContent = "it's an api"
-            
-        }
+           responseContent ==`api`;
     
         if (isPage) {
             responseContent = `puslapis `;
