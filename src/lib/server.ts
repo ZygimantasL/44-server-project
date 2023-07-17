@@ -21,7 +21,7 @@ const server = {} as Server;
             .replace(/\/\/+/g, '/');
     
         const textFileExtensions = ['css', 'js', 'svg', 'webmanifest'];
-        const binaryFileExtensions = ['png', 'jpg', 'jpeg', 'webp', 'ico', 'eot', 'ttf', 'woff', 'woff2', 'otf'];
+        const binaryFileExtensions = ['png', 'jpg', 'jpeg', 'webp', 'ico', 'eot', 'ttf', 'woff', 'woff2', 'otf', 'gif'];
         const fileExtension = trimmedPath.slice(trimmedPath.lastIndexOf('.') + 1);
     
         const isTextFile = textFileExtensions.includes(fileExtension);
